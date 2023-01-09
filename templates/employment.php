@@ -4,9 +4,9 @@
 get_header();
 ?>
 <?php get_template_part('template-parts/section/banner'); ?>
-<div class="wrapper py-8">
+<div class="wrapper py-8 mt-10">
 
-    <div class="container">
+    <div class="container employment-template">
 
 
 

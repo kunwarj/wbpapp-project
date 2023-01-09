@@ -13,20 +13,18 @@ $deadline = get_field('deadline');
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header flex justify-between">
+    <header class="entry-header flex justify-between pb-4">
         <?php
-        the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
+        the_title('<h2 class="entry-title text-[#47525E] text-2xl"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
         ?>
         <!-- Deadline date -->
-        <p class="deadline-date">Deadline: <?php echo $deadline; ?></p>
+        <p class="deadline-date text-[#47525E] text-2xl">Deadline: <?php echo $deadline; ?></p>
     </header><!-- .entry-header -->
 
-    <div class="entry-content">
+    <div class="entry-content single-content text-base">
         <?php the_excerpt(); ?>
     </div><!-- .entry-content -->
 
-    <footer class="entry-footer">
-        <!-- button -->
-        <a href="<?php the_permalink(); ?>" class="btn btn-primary">LEARN MORE</a>
-    </footer><!-- .entry-footer -->
+    <a href="<?php the_permalink(); ?>" class="button primary mt-5 inline-block mb-10">LEARN MORE</a>
+
 </article><!-- #post-<?php the_ID(); ?> -->

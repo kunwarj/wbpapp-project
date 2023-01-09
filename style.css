@@ -57,3 +57,42 @@ nav ul li.current_page_item a {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+.button.primary {
+    border-radius: 5px;
+    --tw-bg-opacity: 1;
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+    --tw-text-opacity: 1;
+    transition: 0.3s all ease-in-out;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    background-color: rgb(52 63 75 / var(--tw-bg-opacity));
+}
+
+.button:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    border: 1px solid rgb(52 63 75 / var(--tw-text-opacity));
+    color: rgb(52 63 75 / var(--tw-text-opacity));
+}
+
+.single-content p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #8190A5;
+    padding-bottom: 10px;
+}
+
+.employment-template article{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

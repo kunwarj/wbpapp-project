@@ -11,7 +11,10 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main mb-16">
+
+
+
     <?php
     while (have_posts()) :
         the_post();
@@ -23,22 +26,32 @@ get_header();
     ?>
 
         <?php get_template_part('template-parts/section/banner'); ?>
+        <div class="container mt-10 mb-20">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <div class="entry-header flex justify-between pb-4 items-baseline">
 
-            <!-- apply now button -->
-            <a href="<?php echo get_field('apply_now_link'); ?>" class="btn btn-primary">APPLY NOW</a>
+                    <!-- Deadline date -->
+                    <p class="deadline text-[#47525E] text-2xl">Deadline: <?php echo $deadline; ?></p>
 
-            <div class="entry-content">
-                <p><strong>Deadline:</strong> <?php echo $deadline; ?></p>
-                <p><strong>Location:</strong> <?php echo $location; ?></p>
-                <p><strong>Salary:</strong> <?php echo $salary; ?></p>
-                <?php the_content(); ?>
-            </div><!-- .entry-content -->
+                    <a href="<?php the_permalink(); ?>" class="button primary mt-5 inline-block">APPLY NOW</a>
+                </div><!-- .entry-header -->
 
-            <!-- apply now button -->
-            <a href="<?php echo get_field('apply_now_link'); ?>" class="btn btn-primary">APPLY NOW</a>
-        </article><!-- #post-<?php the_ID(); ?> -->
+                <!-- apply now button -->
+
+
+                <div class="entry-content mb-6">
+                    <p><strong>Location:</strong> <?php echo $location; ?></p>
+                    <p><strong>Salary:</strong> <?php echo $salary; ?></p>
+                </div><!-- .entry-content -->
+                <div class="single-content">
+                    <?php the_content(); ?>
+                </div>
+
+                <!-- apply now button -->
+                <a href="<?php the_permalink(); ?>" class="button primary mt-5 inline-block">APPLY NOW</a>
+            </article><!-- #post-<?php the_ID(); ?> -->
+        </div>
     <?php
 
     endwhile; // End of the loop.
@@ -47,5 +60,4 @@ get_header();
 </main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
