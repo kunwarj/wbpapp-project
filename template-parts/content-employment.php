@@ -8,57 +8,25 @@
  * @package Wbpapp_Project
  */
 
+$deadline = get_field('deadline');
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
         <?php
-        if (is_singular()) :
-            the_title('<h1 class="entry-title">', '</h1>');
-        else :
-            the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
-        endif;
-
-        if ('post' === get_post_type()) :
+        the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
         ?>
-            <div class="entry-meta">
-                <?php
-                wbpapp_project_posted_on();
-                wbpapp_project_posted_by();
-                ?>
-            </div><!-- .entry-meta -->
-        <?php endif; ?>
+        <!-- Deadline date -->
+        <p class="deadline-date">Deadline: <?php echo $deadline; ?></p>
     </header><!-- .entry-header -->
 
-    <?php wbpapp_project_post_thumbnail(); ?>
-
     <div class="entry-content">
-        <?php
-        the_content(
-            sprintf(
-                wp_kses(
-                    /* translators: %s: Name of current post. Only visible to screen readers */
-                    __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'wbpapp-project'),
-                    array(
-                        'span' => array(
-                            'class' => array(),
-                        ),
-                    )
-                ),
-                wp_kses_post(get_the_title())
-            )
-        );
-
-        wp_link_pages(
-            array(
-                'before' => '<div class="page-links">' . esc_html__('Pages:', 'wbpapp-project'),
-                'after'  => '</div>',
-            )
-        );
-        ?>
+        <?php the_excerpt(); ?>
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">
-        <?php wbpapp_project_entry_footer(); ?>
+        <!-- button -->
+        <a href="<?php the_permalink(); ?>" class="btn btn-primary">LEARN MORE</a>
     </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
