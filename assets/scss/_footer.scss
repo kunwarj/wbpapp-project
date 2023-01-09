@@ -1,0 +1,23 @@
+footer {
+  .mainFooter {
+    form {
+      .form-field {
+        input {
+          @apply border rounded-[5px] h-10 md:h-[50px] px-5 py-3 text-base md:text-lg leading-6 border-tertary text-hoverColor focus:outline-none active:bg-white w-full;
+        }
+      }
+    }
+  }
+  .copyright div ul {
+    @apply text-primary text-base lg:text-lg;
+    li::after {
+      @apply content-['|'] ml-3;
+    }
+    li:last-child:after {
+      @apply hidden;
+    }
+    li:first-child a {
+      @apply pointer-events-none;
+    }
+  }
+}

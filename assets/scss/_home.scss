@@ -1,0 +1,24 @@
+// Contact form
+form {
+  .form-field {
+    @apply text-secondary text-base lg:text-lg col-span-2;
+    input {
+      @apply border rounded-[5px] h-12 md:h-16 px-5 py-4 text-base md:text-lg leading-6 border-tertary text-secondary focus:outline-none active:bg-transparent w-full;
+    }
+    select {
+      @apply border rounded-[5px] h-12 md:h-16 px-5 py-4 text-base md:text-lg leading-6 border-tertary text-secondary focus:outline-none active:bg-transparent w-full;
+    }
+    textarea {
+      @apply border rounded-[5px] resize-none h-32 md:h-[150px] px-5 py-4 text-base md:text-lg leading-6 border-tertary text-secondary focus:outline-none active:bg-transparent w-full;
+    }
+  }
+  .field-half {
+    @apply col-span-2 sm:col-span-1;
+  }
+  button {
+    @apply col-span-2;
+  }
+  textarea::-webkit-scrollbar {
+    @apply hidden;
+  }
+}

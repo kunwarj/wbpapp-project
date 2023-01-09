@@ -53,6 +53,7 @@ function wbpapp_project_setup()
         array(
             'primary' => esc_html__('Primary', 'wbpapp-project'),
             'footer-menu' => esc_html__('Footer Menu', 'wbpapp-project'),
+            'quick-links' => esc_html__('Footer Quick Links', 'wbpapp-project'),
         )
     );
 
@@ -144,14 +145,11 @@ add_action('widgets_init', 'wbpapp_project_widgets_init');
  */
 function wbpapp_project_scripts()
 {
-    wp_enqueue_style('wbpapp-project-style', get_stylesheet_uri(), array(), _S_VERSION);
-    wp_style_add_data('wbpapp-project-style', 'rtl', 'replace');
-
-    wp_enqueue_script('wbpapp-project-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true);
-
-    if (is_singular() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
+    // get current time
+    $timenow = time();
+    wp_enqueue_style('wbpapp-project-custom', get_template_directory_uri() . '/dist/css/app.css', array(), $timenow);
+    wp_enqueue_style('wbpapp-project-style', get_stylesheet_uri(), array(), $timenow);
+    wp_enqueue_script('wbpapp-project-custom', get_template_directory_uri() . '/assets/js/app.js', array(), $timenow, true);
 }
 add_action('wp_enqueue_scripts', 'wbpapp_project_scripts');
 

@@ -1,0 +1,43 @@
+// Main Nav Bar
+nav {
+  ul {
+    li {
+      @apply w-full md:w-fit inline-block text-base lg:text-lg h-auto border-b md:border-none py-5 md:py-0;
+      a {
+        @apply block w-full py-2 lg:py-3 text-primary px-4 lg:px-7 hover:bg-hoverColor hover:text-white animation;
+      }      
+    }
+    // li:last-child a {
+    //   @apply text-primary py-2 lg:py-3 px-0 pl-4 lg:pl-7 bg-white animation;
+    // }
+  }
+}
+
+// Hamburger Menu
+#hamburger.active {
+  #span1 {
+    transform: translateX(32px);
+  }
+  #span2 {
+    width: 20px;
+    transform: rotate(45deg);
+  }
+  #span3 {
+    width: 20px;
+    transform: rotate(-45deg);
+  }
+  #span4 {
+    transform: translateX(-32px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    #hammenu {
+      display: flex !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+

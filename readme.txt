@@ -22,6 +22,19 @@ Description
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
+# for homepage:
+1. Create a page, assign that page as front page via settings and Field will populate on that particular page.
+2. Update the each field content and save changes
+
+# for employment:
+1. Click add new button for employment.
+2. Insert title, content, location, deadline, salary, or other attributes(currently doesnot shows anything on frotend).
+3. Click on save changes button.
+
+== Development ==
+1. For tailwind- run this command `npx tailwindcss -i ./assets/css/tailwind.css -o ./style.css --watch`
+
+
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =
