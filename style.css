@@ -14,30 +14,39 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 */
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
 
+header a img {
+    height: 100px !important;
+    width: auto !important;
+}
+
+.banner .container .title {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.none {
+    display: none;
+}
+
 /* About section */
-.section-about {
-    display: flex;
-    padding: 98px 0;
+
+#about {
+    padding-top: 102px;
+    padding-bottom: 132px;
 }
 
 .about-left {
     width: 50%;
     text-align: left;
-    padding: 10px;
-}
-
-.about-left h1 {
-    color: #47525E;
-    font-size: 48px;
-    line-height: 40px;
+    padding-right: 120px;
 }
 
 .about-left p {
     color: #8190A5;
     font-size: 18px;
-    line-height: 30px;
-    margin-top: 75px;
-    padding-right: 65px;
+    line-height: 28px;
+    text-align: left;
+    margin-top: 50px;
 }
 
 .about-right {
@@ -46,11 +55,25 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     text-align: right;
 }
 
+.about-right img[alt="about-image-first"] {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .about-right img.dfx-truck {
+    width: 40%;
     position: absolute;
     bottom: -30px;
     left: -60px;
 }
+
+.detailsDetails {
+    color: #8190A5;
+    font-size: 18px;
+    line-height: 30px;
+}
+
 nav ul li.current_page_item a {
     --tw-bg-opacity: 1;
     background-color: rgb(52 63 75 / var(--tw-bg-opacity));
@@ -61,7 +84,7 @@ nav ul li.current_page_item a {
 .button.primary {
     border-radius: 5px;
     --tw-bg-opacity: 1;
-    
+
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 3rem;
@@ -81,18 +104,289 @@ nav ul li.current_page_item a {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
-    border: 1px solid rgb(52 63 75 / var(--tw-text-opacity));
     color: rgb(52 63 75 / var(--tw-text-opacity));
 }
 
-.single-content p{
-    font-size: 18px;
-    line-height: 30px;
-    color: #8190A5;
-    padding-bottom: 10px;
+form .submitButton {
+    grid-column: span 2 / span 2;
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.employment-template article{
-    margin-top: 10px;
-    margin-bottom: 20px;
+form .submitButton p {
+    width: min-content;
 }
+
+form .submitButton p input {
+    cursor: pointer;
+}
+
+form .submitButton .wpcf7-spinner {
+    display: none;
+}
+
+form .wpcf7-response-output {
+    border: none !important;
+    color: red !important;
+    padding: 0 !important;
+    padding-top: 10px !important;
+    margin: 0 !important;
+    font-size: 16px;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.copyright {
+    color: #47525E !important;
+}
+
+.copyright .sep {
+    padding-left: 12px !important;
+}
+
+.mainFooter form .form-field {
+    position: relative;
+}
+
+.mainFooter form .form-field input {
+    padding-left: 53px !important;
+    color: #8190A5;
+}
+
+.mainFooter form .form-field svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    height: 18px;
+    width: 18px;
+}
+
+.site-main article,
+.employment-template {
+    padding-top: 78px;
+    padding-bottom: 78px;
+}
+
+.site-main article .entry-content,
+.employment-template article .entry-content {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.employment-template article a.button {
+    margin-bottom: 56px;
+    white-space: nowrap;
+    font-size: 18px;
+    border: 1px solid #47525E;
+    font-weight: 400;
+}
+
+.employment-template article a.button:hover {
+    border: 1px solid #47525E;
+    color: #47525E;
+}
+
+.employment-template article:last-child a.button {
+    margin-bottom: 0px;
+}
+
+.site-main article a.bottomApplyNow,
+.site-main article .entry-header a {
+    white-space: nowrap;
+    font-size: 18px;
+    border: 1px solid #47525E;
+    font-weight: 400;
+}
+
+.site-main article a.bottomApplyNow:hover,
+.site-main article .entry-header a.button:hover {
+    border: 1px solid #47525E;
+    color: #47525E;
+}
+
+.site-main article .single-content p {
+    padding-bottom: 28px;
+}
+
+.site-main {
+    position: relative;
+}
+
+.site-main #apply-pop-up-bg {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #47525e8e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-main #popup-body {
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+}
+
+.site-main #popup-content {
+}
+
+.site-main #popup-body svg {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translateY(calc(-100% - 10px));
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1023px) {
+    header a img {
+        height: 80px !important;
+    }
+
+    #about {
+        padding-top: 80px;
+        padding-bottom: 110px;
+    }
+
+    .about-left p {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .about-right img.dfx-truck {
+        width: 50%;
+    }
+
+    .site-main article,
+    .employment-template {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .site-main article a.bottomApplyNow,
+    .site-main article .entry-header a.button,
+    .employment-template article a.button {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .about-left {
+        padding-right: 100px;
+    }
+
+    .about-right img.dfx-truck {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header a img {
+        height: 64px !important;
+    }
+
+    .banner .container .title {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .site-main article .entry-content,
+    .employment-template article .entry-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .site-main article .single-content p {
+        padding-bottom: 20px;
+    }
+
+    #about {
+        padding-top: 48px;
+        padding-bottom: 78px;
+    }
+
+    .about-left {
+        width: 100%;
+        padding-right: 0px;
+        padding-bottom: 20px;
+    }
+
+    .about-right {
+        width: 100%;
+        padding-left: 60px;
+    }
+
+    .about-right img.dfx-truck {
+        bottom: -30px;
+        left: 0px;
+    }
+
+    .about-left p {
+        margin-top: 20px;
+    }
+
+    .about-right img.dfx-truck {
+        width: 40%;
+    }
+
+    .detailsDetails p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .site-main article,
+    .employment-template {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .employment-template article a.button {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 639px) {
+    header a img {
+        height: 56px !important;
+    }
+
+    .banner .container .title {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #about {
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .copyright .sep {
+        display: none !important;
+    }
+
+    .site-main article,
+    .employment-template {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .site-main article .entry-header {
+        align-items: start;
+    }
+}
+

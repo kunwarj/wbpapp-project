@@ -3,7 +3,7 @@
 // wp query to get all employment posts
 $args = array(
     'post_type' => 'employment',
-    'posts_per_page' => 10,
+    'posts_per_page' => -1,
     'orderby' => 'menu_order',
     'order' => 'ASC',
 );

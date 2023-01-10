@@ -2,15 +2,17 @@
 $aboutFields = get_field('about', get_the_ID()); ?>
 
 <!-- About section Begins -->
-<section class="py-10 sm:py-12 md:py-20 lg:py-[102px]" id="about">
-    <div class="container flex max-w-full">
-        <div class="about-left w-1/2">
-            <h4 class="text-[22px] md:text-[28px] leading-6 md:leading-8 text-primary font-semibold">
-                <?php echo $aboutFields['title']; ?></h4>
-            <?php echo $aboutFields['content']; ?>
+<section class="" id="about">
+    <div class="container flex flex-col md:flex-row max-w-full">
+        <div class="about-left">
+            <h2 class="text-primary text-3xl md:text-4xl lg:text-5xl leading-[62px] text-left font-semibold">
+                <?php echo $aboutFields['title']; ?>
+            </h2>
+            <p class="">
+                <?php echo $aboutFields['content']; ?>
+            </p>
         </div>
         <div class="about-right flex">
-
             <?php
             $images = $aboutFields['images'];
             ?>

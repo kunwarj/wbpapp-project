@@ -35,7 +35,6 @@
                     <a href="index.html">
                         <?php
                         the_custom_logo(); ?>
-                        <!-- <img src="assets/images/others/logo1.png" alt="" class="h-14 sm:h-16 md:h-20 lg:h-[100px] w-auto" /> -->
                     </a>
                 </div>
                 <div class="grid w-5 items-end space-y-[.375rem] overflow-hidden p-0 sm:w-6 md:hidden" id="hamburger">

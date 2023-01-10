@@ -8,12 +8,13 @@ $services = get_field('services', get_the_ID());
 <section class="py-10 sm:py-12 md:py-20 lg:py-[102px]">
     <div class="container grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-[78px]">
         <?php
-        foreach ($services as $service) : ?>
+        foreach ($services as $service): ?>
             <div class="grid grid-rows-[auto,1fr,auto]">
                 <div class="relative w-full overflow-hidden pt-[74%]">
                     <div class="absolute bottom-0 left-0 right-0 top-0 w-full h-full">
                         <a href="#">
-                            <img src="<?php echo $service['image']; ?>" alt="" class=" w-full h-full object-cover object-center group-hover:scale-110 animation" />
+                            <img src="<?php echo $service['image']; ?>" alt=""
+                                class=" w-full h-full object-cover object-center group-hover:scale-110 animation" />
                         </a>
                     </div>
                 </div>
@@ -22,10 +23,8 @@ $services = get_field('services', get_the_ID());
                         <?php echo $service['title']; ?>
                     </h4>
                 </a>
-                <a href="#">
-                    <p class="text-base md:text-lg leading-[22px] md:leading-[30px] text-secondary">
-                        <?php echo $service['content']; ?>
-                    </p>
+                <a href="#" class="detailsDetails">
+                    <?php echo $service['content']; ?>
                 </a>
             </div>
 

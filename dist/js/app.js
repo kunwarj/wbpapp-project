@@ -8,41 +8,41 @@
 /***/ (() => {
 
 // Hamburger
-var body = document.querySelector('body');
-var hamburger = document.querySelector('#hamburger');
-var hammenu = document.querySelector('#hammenu');
-var span1 = document.querySelector('#span1');
-var span2 = document.querySelector('#span2');
-var span3 = document.querySelector('#span3');
-var span4 = document.querySelector('#span4');
-hamburger.addEventListener('click', function () {
-  if (hamburger.classList.contains('active')) {
-    hamburger.classList.remove('active');
-    hammenu.style.display = 'none';
-    hammenu.style.opacity = '0';
-    body.style.overflow = 'auto';
+var body = document.querySelector("body");
+var hamburger = document.querySelector("#hamburger");
+var hammenu = document.querySelector("#hammenu");
+var span1 = document.querySelector("#span1");
+var span2 = document.querySelector("#span2");
+var span3 = document.querySelector("#span3");
+var span4 = document.querySelector("#span4");
+hamburger.addEventListener("click", function () {
+  if (hamburger.classList.contains("active")) {
+    hamburger.classList.remove("active");
+    hammenu.style.display = "none";
+    hammenu.style.opacity = "0";
+    body.style.overflow = "auto";
   } else {
-    hamburger.classList.add('active');
-    hammenu.style.display = 'block';
-    hammenu.style.opacity = '1';
-    body.style.overflow = 'hidden';
+    hamburger.classList.add("active");
+    hammenu.style.display = "block";
+    hammenu.style.opacity = "1";
+    body.style.overflow = "hidden";
   }
 });
 
 // Home hero slider
-var swiper = new Swiper('.heroSwiper', {
+var swiper = new Swiper(".heroSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: true,
   grabCursor: true,
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     clickable: true
   }
 });
 
 // Project slider
-var swiper = new Swiper('.projectSwiper', {
+var swiper = new Swiper(".projectSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: true,
@@ -58,6 +58,19 @@ var swiper = new Swiper('.projectSwiper', {
       slidesPerView: 2
     }
   }
+});
+
+// Popup
+var openPopup = document.querySelector(".applyNowButton");
+var closePopup = document.querySelector("#close-pop-up");
+var popup = document.querySelector("#apply-pop-up-bg");
+openPopup.addEventListener("click", function () {
+  popup.style.display = "flex";
+  body.style.overflow = "hidden";
+});
+closePopup.addEventListener("click", function () {
+  popup.style.display = "none";
+  body.style.overflow = "auto";
 });
 
 /***/ }),
