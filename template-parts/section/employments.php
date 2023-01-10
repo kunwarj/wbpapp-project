@@ -12,13 +12,18 @@ $employment = new WP_Query($args);
 
 // loop through all employment posts
 if ($employment->have_posts()) {
+?>
+    <div id="employment">
+        <?php
+        while ($employment->have_posts()) {
+            $employment->the_post();
 
-    while ($employment->have_posts()) {
-        $employment->the_post();
-
-        // import template part for each employment post
-        get_template_part('template-parts/content', get_post_type());
-    }
+            // import template part for each employment post
+            get_template_part('template-parts/content', get_post_type());
+        }
+        ?>
+    </div>
+<?php
 }
 
 // reset post data
