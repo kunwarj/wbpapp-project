@@ -20,7 +20,8 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -38,24 +39,40 @@
                     </a>
                 </div>
                 <div class="grid w-5 items-end space-y-[.375rem] overflow-hidden p-0 sm:w-6 md:hidden" id="hamburger">
-                    <div class="h-[.1875rem] w-full origin-left bg-primary duration-200 ease-in-out" id="span1"></div>
-                    <div class="w-full">
-                        <div class="mx-auto h-[.1875rem] w-full origin-center bg-primary duration-200 ease-in-out" id="span2"></div>
-                        <div class="mx-auto -mt-[.1875rem] h-[.1875rem] w-full origin-center bg-primary duration-200 ease-in-out" id="span3"></div>
+                    <div class="h-[.1875rem] w-full origin-left bg-primary duration-200 ease-in-out" id="span1">
                     </div>
-                    <div class="h-[.1875rem] w-full origin-right bg-primary duration-200 ease-in-out" id="span4"></div>
+                    <div class="w-full">
+                        <div class="mx-auto h-[.1875rem] w-full origin-center bg-primary duration-200 ease-in-out"
+                            id="span2"></div>
+                        <div class="mx-auto -mt-[.1875rem] h-[.1875rem] w-full origin-center bg-primary duration-200 ease-in-out"
+                            id="span3"></div>
+                    </div>
+                    <div class="h-[.1875rem] w-full origin-right bg-primary duration-200 ease-in-out" id="span4">
+                    </div>
                 </div>
-                <div class="h-screen md:h-auto md:relative absolute right-0 top-[58px] sm:top-[66px] md:top-0 bg-white hidden opacity-0 flex-col md:flex-row gap-5 md:gap-[60px] items-start md:items-center" id="hammenu">
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'primary',
-                            'menu_id'        => 'primary-menu',
-                            'menu_class'     => 'flex flex-col md:flex-row items-start whitespace-nowrap w-[280px] md:w-fit h-full p-5 pt-0 md:p-0',
-                            'container'      => 'nav',
-                        )
-                    );
-                    ?>
+                <div class="h-screen md:h-auto md:relative absolute right-0 top-[58px] sm:top-[66px] md:top-0 bg-white hidden opacity-0 px-5 md:px-0"
+                    id="hammenu">
+                    <div class="flex-col md:flex-row gap-5 md:gap-[60px] items-start md:items-center">
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'primary',
+                                'menu_id' => 'primary-menu',
+                                'menu_class' => 'flex flex-col md:flex-row items-start whitespace-nowrap w-[280px] md:w-fit h-full',
+                                'container' => 'nav',
+                            )
+                        );
+                        ?>
+                    </div>
+                    <div class="headerSearch h-10 lg:h-[52px]">
+                        <a href="#">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                                    stroke="#8190A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>

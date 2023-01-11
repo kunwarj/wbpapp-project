@@ -3,7 +3,7 @@
 $homeBanner = get_field('banner', get_the_ID());
 ?>
 <!-- Hero -->
-<section id="banner" class="pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] w-full">
+<section class="pt-14 sm:pt-16 md:pt-20 lg:pt-[100px] w-full">
     <div class="relative w-full h-full overflow-hidden">
         <div class="pt-[33%] pb-16 lg:pb-24 xl:pb-32 w-full mx-auto max-w-[812px] px-4 sm:px-5 lg:px-10 flex-col flex items-center relative z-10">
             <h6 class="text-white mb-0 lg:mb-3 text-base lg:text-lg leading-[62px] text-center">

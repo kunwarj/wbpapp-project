@@ -19,13 +19,46 @@ header a img {
     width: auto !important;
 }
 
+header .headerSearch {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 28px;
+    border-bottom-width: 0px;
+    display: flex;
+    align-items: center;
+}
+
+header .headerSearch a {
+    width: 100%;
+    display: block;
+}
+
+header .headerSearch a svg {
+    width: 18px;
+    height: 18px;
+}
+
+#hamburger {
+    cursor: pointer;
+}
+
 .banner .container .title {
     padding-top: 64px;
     padding-bottom: 64px;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 
-.none {
-    display: none;
+footer ul li.current_page_item a {
+    font-weight: 800;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .copyright div ul li:first-child a {
+    pointer-events: all;
 }
 
 /* About section */
@@ -214,6 +247,12 @@ form .wpcf7-response-output {
     position: relative;
 }
 
+.site-main article,
+.employment-template article {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .site-main #apply-pop-up-bg {
     position: fixed;
     z-index: 9999;
@@ -237,8 +276,7 @@ form .wpcf7-response-output {
     position: relative;
 }
 
-.site-main #popup-content {
-}
+.site-main #popup-content {}
 
 .site-main #popup-body svg {
     width: 40px;
@@ -253,6 +291,10 @@ form .wpcf7-response-output {
 @media only screen and (max-width: 1023px) {
     header a img {
         height: 80px !important;
+    }
+
+    header .headerSearch {
+        padding-left: 16px;
     }
 
     #about {
@@ -295,6 +337,22 @@ form .wpcf7-response-output {
 @media only screen and (max-width: 767px) {
     header a img {
         height: 64px !important;
+    }
+
+    header .headerSearch {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 20px;
+        border-bottom-width: 1px;
+    }
+
+    header .headerSearch a {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .banner .container .title {
@@ -389,4 +447,3 @@ form .wpcf7-response-output {
         align-items: start;
     }
 }
-

@@ -2,7 +2,7 @@
 $ctaFields = get_field('employment_cta', get_the_ID()); ?>
 
 <!-- Employment Opportunities -->
-<section class="py-10 sm:py-12 md:py-20 lg:py-[102px] bg-bgColor" id="cta">
+<section class="py-10 sm:py-12 md:py-20 lg:py-[102px] bg-bgColor">
     <div class="container">
         <div class="relative border border-transparent">
             <div class="relative xs:absolute w-full xs:w-[36%] sm:w-[40%] md:w-[34%] top-0 left-0">

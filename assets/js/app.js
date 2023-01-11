@@ -11,12 +11,10 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.remove("active");
     hammenu.style.display = "none";
     hammenu.style.opacity = "0";
-    body.style.overflow = "auto";
   } else {
     hamburger.classList.add("active");
     hammenu.style.display = "block";
     hammenu.style.opacity = "1";
-    body.style.overflow = "hidden";
   }
 });
 

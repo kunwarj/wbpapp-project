@@ -1,5 +1,5 @@
 <!-- Contact Us -->
-<section class="py-10 sm:py-12 md:py-20 lg:py-[102px] bg-bgColor" id="contact-us">
+<section class="py-10 sm:py-12 md:py-20 lg:py-[102px] bg-bgColor">
     <div class="container">
         <div class="w-full max-w-[1000px] mx-auto bg-white px-5 xs:px-10 sm:px-14 md:px-16 lg:px-[77px] py-6 xs:py-7 sm:py-8 md:py-9 lg:py-11">
             <div class="mb-8">
